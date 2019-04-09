@@ -1,0 +1,75 @@
+.skills {
+  padding: 10rem 0;
+  background-color: #f6f5f5;
+
+  @include respond(tab-port) {
+    padding: 5rem 0;
+  }
+
+  .section-heading {
+    text-align: center;
+    font-size: 6rem;
+    color: $heading-color;
+    font-weight: bold;
+  }
+
+  &_icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    color: $icon-color;
+    font-size: 4rem;
+    padding: 2rem;
+
+    & > * {
+      padding: 2rem;
+    }
+  }
+
+  .bio {
+    width: 80rem;
+    margin: 0 auto;
+    padding: 15rem 0;
+    display: flex;
+
+    @include respond(tab-port) {
+      width: 100%;
+      flex-direction: column;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+
+    .avator {
+      border-radius: 50%;
+      width: 20rem;
+      height: 21rem;
+      order: 1;
+      box-shadow: 1px 1px 40px 0px rgba(0, 0, 0, 0.75);
+
+      @include respond(tab-port) {
+        order: 0;
+        margin: 0 auto;
+        margin-bottom: 5rem;
+      }
+    }
+
+    .description {
+      padding-right: 7rem;
+      margin-top: -3rem;
+
+      h1 {
+        font-size: 3rem;
+      }
+
+      p {
+        font-size: 2rem;
+      }
+
+      @include respond(tab-port) {
+        padding-right: 0;
+        padding: 0 3rem;
+      }
+    }
+  }
+}
