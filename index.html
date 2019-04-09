@@ -40,9 +40,42 @@
   <body>
     <div class="container">
       <header>
-        <!-- <div class="navigation animated fadeIn delay-1s">
-          <i class="fas fa-bars icon"></i>
-        </div> -->
+        <div class="navigation">
+          <input
+            type="checkbox"
+            class="navigation__checkbox"
+            id="navi-toggle"
+          />
+
+          <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+          </label>
+
+          <div class="navigation__background">&nbsp;</div>
+
+          <nav class="navigation__nav">
+            <ul class="navigation__list" id="list">
+              <li class="navigation__item">
+                <a href="#" class="navigation__link"><span>01</span>Home</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#skills" class="navigation__link"
+                  ><span>02</span>Skills</a
+                >
+              </li>
+              <li class="navigation__item">
+                <a href="#projects" class="navigation__link"
+                  ><span>03</span>Projects</a
+                >
+              </li>
+              <li class="navigation__item">
+                <a href="#contact" class="navigation__link"
+                  ><span>04</span>Contact</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
 
         <video autoplay loop muted class="hero-video" plays-inline>
           <source
@@ -99,12 +132,12 @@
           </div>
         </section>
 
-        <section class="projects">
-          <h1>Projects</h1>
+        <section class="projects" id="projects">
+          <h1 class="animated fadeInUp">Projects</h1>
           <p>I'm still working on this section ...</p>
         </section>
 
-        <section class="contact">
+        <section class="contact" id="contact">
           <p>
             Want to say 'hello' or have a question? Email me at
             <a href="mailto:sawshanphaung@icloud.com" class="email"
@@ -126,5 +159,15 @@
         </p>
       </footer>
     </div>
+
+    <script>
+      var arrayImg = document.getElementById("list").children;
+
+      for (var i = 0; i < arrayImg.length; i++) {
+        arrayImg[i].onclick = function() {
+          document.getElementById("navi-toggle").checked = false;
+        };
+      }
+    </script>
   </body>
 </html>
