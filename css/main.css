@@ -394,7 +394,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 }
 
 .hero-video {
-  position: absolute;
+  position: fixed;
   z-index: -1;
   opacity: 0.5;
 }
