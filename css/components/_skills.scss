@@ -60,12 +60,13 @@
       padding-right: 7rem;
       margin-top: -3rem;
 
-      h1 {
-        font-size: 3rem;
-      }
-
       p {
         font-size: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 100%;
       }
 
       @include respond(tab-port) {
