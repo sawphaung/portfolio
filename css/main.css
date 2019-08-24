@@ -360,7 +360,7 @@ body {
           box-sizing: border-box;
   line-height: 1.7;
   letter-spacing: 0.3rem;
-  font-family: "Caveat", cursive;
+  font-family: 'Ubuntu Mono', monospace;
 }
 
 /*
@@ -423,12 +423,8 @@ ORDER: Base + typography > general layout + grid > page layout > components
 @media only screen and (max-width: 56.25em) {
   .hero {
     z-index: -1;
-    background: #abbaab;
-    /* fallback for old browsers */
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-gradient(linear, left top, right top, from(#ffffff), to(#abbaab));
-    background: linear-gradient(to right, #ffffff, #abbaab);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#d299c2), to(#fef9d7));
+    background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
   }
 }
 
@@ -440,13 +436,12 @@ ORDER: Base + typography > general layout + grid > page layout > components
   display: block;
   font-size: 10rem;
   color: #c40b13;
-  font-family: "Merienda", cursive;
+  font-family: 'Merienda', cursive;
 }
 
 .hero_heading--sub, .hero_heading--intro {
   font-weight: 500;
   font-size: 3rem;
-  font-family: "Caveat", cursive;
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -773,6 +768,8 @@ footer span i {
 }
 
 .skills_icons {
+  width: 80%;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -861,8 +858,15 @@ footer span i {
   background-color: #fff;
 }
 
+.contact .section-heading {
+  text-align: center;
+  font-size: 6rem;
+  color: #c40b13;
+  font-weight: bold;
+}
+
 .contact p {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .contact a {

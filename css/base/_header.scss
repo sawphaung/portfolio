@@ -31,17 +31,7 @@
 
   @include respond(tab-port) {
     z-index: -1;
-    background: #abbaab; /* fallback for old browsers */
-    background: -webkit-linear-gradient(
-      to right,
-      #ffffff,
-      #abbaab
-    ); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
-      to right,
-      #ffffff,
-      #abbaab
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
   }
 
   &_heading {
@@ -52,14 +42,13 @@
       font-size: 10rem;
       color: $heading-color;
 
-      font-family: "Merienda", cursive;
+      font-family: 'Merienda', cursive;
     }
 
     &--sub,
     &--intro {
       font-weight: 500;
       font-size: 3rem;
-      font-family: "Caveat", cursive;
     }
 
     @include respond(tab-port) {
