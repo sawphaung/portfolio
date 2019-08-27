@@ -359,7 +359,7 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   line-height: 1.7;
-  letter-spacing: 0.3rem;
+  letter-spacing: 2px;
   font-family: 'Ubuntu Mono', monospace;
 }
 
@@ -430,6 +430,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 .hero_heading {
   text-align: left;
+  padding-left: 2rem;
 }
 
 .hero_heading--primary {
@@ -441,27 +442,30 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 .hero_heading--sub, .hero_heading--intro {
   font-weight: 500;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 @media only screen and (max-width: 56.25em) {
+  .hero_heading {
+    padding-left: 2rem;
+  }
   .hero_heading--primary {
     font-size: 8rem;
   }
   .hero_heading--sub, .hero_heading--intro {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
 
 @media only screen and (max-width: 37.5em) {
   .hero_heading {
-    padding-left: 1rem;
+    padding: 2rem;
   }
   .hero_heading--primary {
-    font-size: 5rem;
+    font-size: 6rem;
   }
   .hero_heading--sub, .hero_heading--intro {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -585,15 +589,15 @@ footer span i {
   left: 5%;
   border-radius: 50%;
   z-index: 2000;
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
-          box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   text-align: center;
   cursor: pointer;
 }
 
 @media only screen and (max-width: 56.25em) {
   .navigation__button {
-    top: 4rem;
+    top: 3.5rem;
     right: 4rem;
   }
 }
@@ -710,7 +714,7 @@ footer span i {
 }
 
 .navigation__icon::before, .navigation__icon::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   -webkit-transition: all 0.2s;
@@ -750,8 +754,8 @@ footer span i {
 }
 
 .skills {
-  padding: 10rem 0;
-  background-color: #f6f5f5;
+  padding: 1.5rem 0;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -780,8 +784,8 @@ footer span i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: 2rem;
   color: #e42e2e;
-  font-size: 4rem;
   padding: 2rem;
 }
 
@@ -789,73 +793,11 @@ footer span i {
   padding: 2rem;
 }
 
-.skills .bio {
-  width: 80rem;
-  margin: 0 auto;
-  padding: 15rem 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-@media only screen and (max-width: 56.25em) {
-  .skills .bio {
-    width: 100%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    text-align: center;
-  }
-}
-
-.skills .bio .avator {
-  border-radius: 50%;
-  width: 20rem;
-  height: 21rem;
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-  -webkit-box-shadow: 1px 1px 40px 0px rgba(0, 0, 0, 0.75);
-          box-shadow: 1px 1px 40px 0px rgba(0, 0, 0, 0.75);
-}
-
-@media only screen and (max-width: 56.25em) {
-  .skills .bio .avator {
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
-    margin: 0 auto;
-    margin-bottom: 5rem;
-  }
-}
-
-.skills .bio .description {
-  padding-right: 7rem;
-  margin-top: -3rem;
-}
-
-.skills .bio .description p {
-  font-size: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100%;
-}
-
-@media only screen and (max-width: 56.25em) {
-  .skills .bio .description {
-    padding-right: 0;
-    padding: 0 3rem;
-  }
+.skills_icons .fab {
+  display: block;
+  text-align: center;
+  font-size: 6rem;
+  margin-bottom: 1rem;
 }
 
 .contact {

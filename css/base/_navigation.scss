@@ -5,6 +5,7 @@
 
   &__button {
     background-color: $icon-color;
+
     height: 7rem;
     width: 7rem;
     position: fixed;
@@ -12,12 +13,13 @@
     left: 5%;
     border-radius: 50%;
     z-index: 2000;
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+    // box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     text-align: center;
     cursor: pointer;
 
     @include respond(tab-port) {
-      top: 4rem;
+      top: 3.5rem;
       right: 4rem;
     }
 
@@ -133,7 +135,7 @@
 
     &::before,
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       left: 0;
       transition: all 0.2s;
