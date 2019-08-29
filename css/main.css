@@ -430,7 +430,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 .hero_heading {
   text-align: left;
-  padding-left: 2rem;
+  padding: 3rem;
 }
 
 .hero_heading--primary {
@@ -447,7 +447,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 @media only screen and (max-width: 56.25em) {
   .hero_heading {
-    padding-left: 2rem;
+    padding: 3rem;
   }
   .hero_heading--primary {
     font-size: 8rem;
@@ -459,7 +459,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 @media only screen and (max-width: 37.5em) {
   .hero_heading {
-    padding: 2rem;
+    padding: 3rem;
   }
   .hero_heading--primary {
     font-size: 6rem;
@@ -582,8 +582,8 @@ footer span i {
 
 .navigation__button {
   background-color: #e42e2e;
-  height: 7rem;
-  width: 7rem;
+  height: 5rem;
+  width: 5rem;
   position: fixed;
   top: 5%;
   left: 5%;
@@ -610,8 +610,8 @@ footer span i {
 }
 
 .navigation__background {
-  height: 7rem;
-  width: 7rem;
+  height: 5rem;
+  width: 5rem;
   border-radius: 50%;
   position: fixed;
   top: 5%;
@@ -703,11 +703,11 @@ footer span i {
 
 .navigation__icon {
   position: relative;
-  margin-top: 3.5rem;
+  margin-top: 2.5rem;
 }
 
 .navigation__icon, .navigation__icon::before, .navigation__icon::after {
-  width: 3rem;
+  width: 2.5rem;
   height: 2px;
   background-color: #fff;
   display: inline-block;
