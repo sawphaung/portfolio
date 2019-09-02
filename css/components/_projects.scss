@@ -1,5 +1,5 @@
 .projects {
-  padding: 20rem 0;
+  padding: 10rem 0;
   background-color: #e7e9e6;
 
   h1 {
@@ -9,8 +9,75 @@
     font-weight: bold;
   }
 
-  p {
-    text-align: center;
-    font-size: 2rem;
+  .project {
+    display: flex;
+    margin: 10rem 5rem;
+    padding: 5rem;
+
+    .img {
+      width: 100%;
+      margin: 0 auto;
+      background-color: antiquewhite;
+      flex: 1;
+
+      img {
+        max-width: 100%;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+          0 6px 6px rgba(0, 0, 0, 0.23);
+      }
+    }
+
+    .contents {
+      flex: 1;
+      margin: 0 5rem;
+
+      &_heading {
+        padding: 2rem 0;
+        font-size: 3.5rem;
+        font-weight: bolder;
+      }
+
+      &_description,
+      &_tech {
+        font-size: 1.8rem;
+        padding-bottom: 2rem;
+      }
+
+      &_button {
+        outline: none;
+        background-color: transparent;
+        border: 1px solid #000;
+        color: #000;
+        border-radius: 15px;
+        display: inline-block;
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1.5;
+        padding: 12px 30px;
+        text-align: center;
+        text-decoration: none;
+        user-select: none;
+        vertical-align: middle;
+        cursor: pointer;
+      }
+    }
+
+    @include respond(tab-land) {
+      display: block;
+      margin: 3rem 3rem;
+
+      .contents {
+        margin: 2rem 0;
+      }
+    }
+
+    @include respond(phone) {
+      margin: 3rem 1rem;
+    }
+  }
+
+  .project-1 .img,
+  .project-3 .img {
+    order: 1;
   }
 }

@@ -443,6 +443,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 .hero_heading--sub, .hero_heading--intro {
   font-weight: 500;
   font-size: 2.5rem;
+  margin-left: 10px;
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -837,7 +838,7 @@ footer span i {
 }
 
 .projects {
-  padding: 20rem 0;
+  padding: 10rem 0;
   background-color: #e7e9e6;
 }
 
@@ -848,8 +849,88 @@ footer span i {
   font-weight: bold;
 }
 
-.projects p {
+.projects .project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10rem 5rem;
+  padding: 5rem;
+}
+
+.projects .project .img {
+  width: 100%;
+  margin: 0 auto;
+  background-color: antiquewhite;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.projects .project .img img {
+  max-width: 100%;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.projects .project .contents {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0 5rem;
+}
+
+.projects .project .contents_heading {
+  padding: 2rem 0;
+  font-size: 3.5rem;
+  font-weight: bolder;
+}
+
+.projects .project .contents_description, .projects .project .contents_tech {
+  font-size: 1.8rem;
+  padding-bottom: 2rem;
+}
+
+.projects .project .contents_button {
+  outline: none;
+  background-color: transparent;
+  border: 1px solid #000;
+  color: #000;
+  border-radius: 15px;
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 12px 30px;
   text-align: center;
-  font-size: 2rem;
+  text-decoration: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 75em) {
+  .projects .project {
+    display: block;
+    margin: 3rem 3rem;
+  }
+  .projects .project .contents {
+    margin: 2rem 0;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .projects .project {
+    margin: 3rem 1rem;
+  }
+}
+
+.projects .project-1 .img,
+.projects .project-3 .img {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 /*# sourceMappingURL=main.css.map */
