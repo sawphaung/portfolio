@@ -838,7 +838,7 @@ footer span i {
 }
 
 .projects {
-  padding: 10rem 0;
+  padding: 5rem 0 2rem;
   background-color: #e7e9e6;
 }
 
@@ -855,6 +855,7 @@ footer span i {
   display: flex;
   margin: 10rem 5rem;
   padding: 5rem;
+  letter-spacing: 1px;
 }
 
 .projects .project .img {
@@ -887,7 +888,7 @@ footer span i {
 
 .projects .project .contents_description, .projects .project .contents_tech {
   font-size: 1.8rem;
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
 }
 
 .projects .project .contents_button {
@@ -918,6 +919,12 @@ footer span i {
   }
   .projects .project .contents {
     margin: 2rem 0;
+  }
+  .projects .project .contents_heading {
+    font-size: 2.5rem;
+  }
+  .projects .project .contents_description, .projects .project .contents_tech {
+    font-size: 1.6rem;
   }
 }
 
