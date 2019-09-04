@@ -894,7 +894,7 @@ footer span i {
 
 .projects .project .contents_description, .projects .project .contents_tech {
   font-size: 1.8rem;
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
 }
 
 .projects .project .contents_button {
@@ -908,7 +908,7 @@ footer span i {
   font-weight: 400;
   line-height: 1.5;
   padding: 12px 30px;
-  margin: 10px 0;
+  margin: 15px 0;
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
