@@ -5,7 +5,6 @@
 
   &__button {
     background-color: $icon-color;
-
     height: 5rem;
     width: 5rem;
     position: fixed;
@@ -13,8 +12,6 @@
     left: 5%;
     border-radius: 50%;
     z-index: 2000;
-    // box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     text-align: center;
     cursor: pointer;
 
@@ -79,10 +76,10 @@
   &__link {
     &:link,
     &:visited {
-      display: inline-block;
+      //   display: inline-block;
       font-size: 3rem;
       font-weight: 300;
-      padding: 1rem 4rem;
+      padding: 1rem 3rem;
       color: $black;
       text-decoration: none;
       text-transform: uppercase;

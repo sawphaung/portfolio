@@ -384,7 +384,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 .hero-video {
   position: fixed;
   z-index: -1;
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -590,8 +590,6 @@ footer span i {
   left: 5%;
   border-radius: 50%;
   z-index: 2000;
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   text-align: center;
   cursor: pointer;
 }
@@ -667,10 +665,9 @@ footer span i {
 }
 
 .navigation__link:link, .navigation__link:visited {
-  display: inline-block;
   font-size: 3rem;
   font-weight: 300;
-  padding: 1rem 4rem;
+  padding: 1rem 3rem;
   color: #000;
   text-decoration: none;
   text-transform: uppercase;
