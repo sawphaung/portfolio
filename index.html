@@ -27,7 +27,7 @@
   <body>
     <div class="container">
       <header>
-        <div class="navigation">
+        <!-- <div class="navigation">
           <input
             type="checkbox"
             class="navigation__checkbox"
@@ -58,7 +58,7 @@
               </li>
             </ul>
           </nav>
-        </div>
+        </div> -->
 
         <video autoplay loop muted class="hero-video" plays-inline>
           <source src="./assets/video/Up.webm" type="video/webm" />
@@ -66,10 +66,10 @@
 
         <div class="hero">
           <h1 class="hero_heading">
-            <span class="hero_heading--intro">Hey there :) I'm</span>
+            <span class="hero_heading--intro">My name is </span>
             <span class="hero_heading--primary">Saw Phaung</span>
             <span class="hero_heading--sub">
-              Front-End Developer. Create on writing clean, elegant and
+              I'm Front End Developer who create on writing clean, elegant and
               efficient code.</span
             >
           </h1>
@@ -85,8 +85,8 @@
       <main>
         <section class="skills" id="skills">
           <div class="skills_icons">
-            <span><i class="fab fa-html5"></i>HTML5</span>
-            <span><i class="fab fa-css3-alt"></i>CSS3</span>
+            <span><i class="fab fa-html5"></i>HTML</span>
+            <span><i class="fab fa-css3-alt"></i>CSS</span>
             <span><i class="fab fa-sass"></i>SASS</span>
             <span><i class="fab fa-js-square"></i>Javascript</span>
             <span><i class="fab fa-react"></i>React</span>
@@ -236,11 +236,11 @@
     </div>
 
     <script>
-      var arrayImg = document.getElementById('list').children;
+      var arrayImg = document.getElementById("list").children;
 
       for (var i = 0; i < arrayImg.length; i++) {
         arrayImg[i].onclick = function() {
-          document.getElementById('navi-toggle').checked = false;
+          document.getElementById("navi-toggle").checked = false;
         };
       }
     </script>
