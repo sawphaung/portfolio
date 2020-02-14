@@ -25,6 +25,13 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
+    <div class="spinner-wrapper">
+      <div class="lds-ripple">
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
     <div class="container">
       <header>
         <!-- <div class="navigation">
@@ -235,13 +242,19 @@
     </div>
 
     <script>
-      var arrayImg = document.getElementById("list").children;
+      var spinnerWrapper = document.querySelector(".spinner-wrapper");
 
-      for (var i = 0; i < arrayImg.length; i++) {
-        arrayImg[i].onclick = function() {
-          document.getElementById("navi-toggle").checked = false;
-        };
-      }
+      window.addEventListener("load", function() {
+        spinnerWrapper.parentElement.removeChild(spinnerWrapper);
+      });
+
+      //   var arrayImg = document.getElementById("list").children;
+
+      //   for (var i = 0; i < arrayImg.length; i++) {
+      //     arrayImg[i].onclick = function() {
+      //       document.getElementById("navi-toggle").checked = false;
+      //     };
+      //   }
     </script>
   </body>
 </html>
