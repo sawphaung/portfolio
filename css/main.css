@@ -507,16 +507,14 @@ ORDER: Base + typography > general layout + grid > page layout > components
 .hero_heading--primary {
   display: block;
   font-size: 10rem;
-  color: whitesmoke;
-  text-shadow: 0 2px 5px #c40b13, 0 2px 3px #000;
+  color: #c40b13;
   font-family: "Merienda", cursive;
 }
 
 .hero_heading--sub, .hero_heading--intro {
   font-weight: 500;
   font-size: 2.5rem;
-  color: gainsboro;
-  text-shadow: 0 2px 3px #000;
+  color: #c40b13;
 }
 
 @media only screen and (max-width: 56.25em) {

@@ -43,9 +43,9 @@
     &--primary {
       display: block;
       font-size: 10rem;
-      color: whitesmoke;
-      text-shadow: 0 2px 5px $heading-color, 0 2px 3px $black;
-      //   color: $heading-color;
+      //   color: whitesmoke;
+      //   text-shadow: 0 2px 5px $heading-color, 0 2px 3px $black;
+      color: $heading-color;
 
       font-family: "Merienda", cursive;
     }
@@ -54,8 +54,9 @@
     &--intro {
       font-weight: 500;
       font-size: 2.5rem;
-      color: gainsboro;
-      text-shadow: 0 2px 3px $black;
+      color: $heading-color;
+      //   color: gainsboro;
+      //   text-shadow: 0 2px 3px $black;
     }
 
     @include respond(tab-port) {
