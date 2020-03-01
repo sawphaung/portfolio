@@ -508,6 +508,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   display: block;
   font-size: 10rem;
   color: #c40b13;
+  margin-left: -5px;
   font-family: "Merienda", cursive;
 }
 

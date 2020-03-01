@@ -21,8 +21,8 @@
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
-
     <link rel="stylesheet" href="css/main.css?v=0.01" />
+    <link rel="stylesheet" href="/css/animate.css"">
   </head>
   <body>
     <div class="spinner-wrapper">
@@ -72,7 +72,7 @@
         </video>
 
         <div class="hero">
-          <h1 class="hero_heading">
+          <h1 class="hero_heading wow fadeIn">
             <span class="hero_heading--intro">Hello.</span>
             <span class="hero_heading--primary">I'm Saw Phaung</span>
             <span class="hero_heading--sub">
@@ -91,23 +91,35 @@
       <main>
         <section class="skills" id="skills">
           <div class="skills_icons">
-            <span><i class="fab fa-html5"></i>HTML</span>
-            <span><i class="fab fa-css3-alt"></i>CSS</span>
-            <span><i class="fab fa-sass"></i>SASS</span>
-            <span><i class="fab fa-js-square"></i>Javascript</span>
-            <span><i class="fab fa-react"></i>React</span>
-            <span><i class="fab fa-github-square"></i>Git</span>
+            <span class="wow bounceInUp" data-wow-delay="0.1s"
+              ><i class="fab fa-html5"></i>HTML</span
+            >
+            <span class="wow bounceInUp" data-wow-delay="0.2s"
+              ><i class="fab fa-css3-alt"></i>CSS</span
+            >
+            <span class="wow bounceInUp" data-wow-delay="0.3s"
+              ><i class="fab fa-sass"></i>SASS</span
+            >
+            <span class="wow bounceInUp" data-wow-delay="0.4s"
+              ><i class="fab fa-js-square"></i>Javascript</span
+            >
+            <span class="wow bounceInUp" data-wow-delay="0.5s"
+              ><i class="fab fa-react"></i>React</span
+            >
+            <span class="wow bounceInUp" data-wow-delay="0.6s"
+              ><i class="fab fa-github-square"></i>Git</span
+            >
           </div>
         </section>
 
         <section class="projects" id="projects">
-          <h1>Projects</h1>
+          <h1 class="wow shake">Projects</h1>
 
           <div class="project project-1">
-            <div class="img">
+            <div class="img wow bounceInRight">
               <img src="./assets/img/project-1.png" class="image" alt="" />
             </div>
-            <div class="contents">
+            <div class="contents wow bounceInUp">
               <h2 class="contents_heading">Where in the World!</h2>
               <p class="contents_description">
                 The website gives you the overview of Countries in the world! It
@@ -132,10 +144,10 @@
           </div>
 
           <div class="project project-2">
-            <div class="img">
+            <div class="img wow bounceInLeft">
               <img src="./assets/img/project-2.png" class="image" alt="" />
             </div>
-            <div class="contents">
+            <div class="contents wow bounceInUp">
               <h2 class="contents_heading">Recipe Finder</h2>
               <p class="contents_description">
                 1.7+ million nutritionally analyzed recipes Detailed macro and
@@ -161,10 +173,10 @@
           </div>
 
           <div class="project project-3">
-            <div class="img">
+            <div class="img wow bounceInRight">
               <img src="./assets/img/project-3.png" class="image" alt="" />
             </div>
-            <div class="contents">
+            <div class="contents wow bounceInUp">
               <h2 class="contents_heading">Codepen Jobs</h2>
               <p class="contents_description">
                 Latest job openings from Codepen Website by using React and
@@ -189,10 +201,10 @@
           </div>
 
           <div class="project project-4">
-            <div class="img">
+            <div class="img wow bounceInLeft">
               <img src="./assets/img/project-4.png" class="image" alt="" />
             </div>
-            <div class="contents">
+            <div class="contents wow bounceInUp">
               <h2 class="contents_heading">Flyo</h2>
               <p class="contents_description">
                 Create basic fundamentals of website using html5 and css3.
@@ -217,7 +229,7 @@
         </section>
 
         <section class="contact" id="contact">
-          <h1 class="section-heading">Contact</h1>
+          <h1 class="section-heading wow bounceInUp">Contact</h1>
           <p>
             Want to say 'hello' or have a question? Email me at
             <a href="mailto:sawshanphaung@icloud.com" class="email"
@@ -239,10 +251,11 @@
         </p>
       </footer>
     </div>
-
+    <script src="/js/wow.min.js"></script>
     <script>
-      var spinnerWrapper = document.querySelector(".spinner-wrapper");
+      new WOW().init();
 
+      var spinnerWrapper = document.querySelector(".spinner-wrapper");
       window.addEventListener("load", function() {
         spinnerWrapper.parentElement.removeChild(spinnerWrapper);
       });
