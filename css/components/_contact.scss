@@ -27,8 +27,21 @@
   @include respond(tab-port) {
     padding: 10rem 1.5rem;
 
+    .section-heading {
+      font-size: 4rem;
+      padding-bottom: 1rem;
+    }
+
     p {
       font-size: 2rem;
+    }
+  }
+
+  @include respond(phone) {
+    padding: 10rem 1rem;
+
+    p {
+      font-size: 1.6rem;
     }
   }
 }

@@ -1,82 +1,79 @@
-.hero-video {
-  position: fixed;
-  z-index: -1;
-  opacity: 0.7;
+// .hero-video {
+//   position: fixed;
+//   z-index: -1;
+//   opacity: 0.7;
 
-  @include respond(tab-port) {
-    display: none;
+//   @include respond(tab-port) {
+//     display: none;
+//   }
+// }
+
+// @media (min-aspect-ratio: 16/9) {
+//   .hero-video {
+//     width: 100%;
+//     height: auto;
+//   }
+// }
+
+// @media (max-aspect-ratio: 16/9) {
+//   .hero-video {
+//     width: auto;
+//     height: 100%;
+//   }
+// }
+
+header {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background: #faf7ff;
+  padding: 0 10rem;
+
+  & > div {
+    width: 50%;
   }
-}
 
-@media (min-aspect-ratio: 16/9) {
-  .hero-video {
-    width: 100%;
-    height: auto;
-  }
-}
+  @include respond(tab-land) {
+    flex-direction: column;
+    padding: 5rem 2rem 0;
 
-@media (max-aspect-ratio: 16/9) {
-  .hero-video {
-    width: auto;
-    height: 100%;
+    & > div {
+      width: 100%;
+    }
   }
 }
 
 .hero {
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  //   background: url(/assets/img/home-hero.jpg) right no-repeat;
-  background-size: cover;
-
-  @include respond(tab-port) {
-    z-index: -1;
-    background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
-  }
 
   &_heading {
     text-align: left;
-    padding: 3rem;
+    padding: 0 3rem;
 
     &--primary {
       display: block;
-      font-size: 10rem;
-      //   color: whitesmoke;
-      //   text-shadow: 0 2px 5px $heading-color, 0 2px 3px $black;
-      color: $heading-color;
+      font-size: 7rem;
+      color: #2e2d41;
       margin-left: -5px;
-      font-family: "Merienda", cursive;
+      line-height: 1;
+      padding: 2rem 0;
     }
 
     &--sub,
     &--intro {
-      font-weight: 500;
-      font-size: 2.5rem;
-      color: $heading-color;
-      //   color: gainsboro;
-      //   text-shadow: 0 2px 3px $black;
+      font-weight: 700;
+      font-size: 2.2rem;
+      color: #3f3c56;
     }
 
     @include respond(tab-port) {
       padding: 3rem;
 
       &--primary {
-        font-size: 8rem;
-      }
-
-      &--sub,
-      &--intro {
-        font-size: 2rem;
-      }
-    }
-
-    @include respond(phone) {
-      padding: 3rem;
-
-      &--primary {
-        font-size: 6rem;
+        font-size: 5rem;
       }
 
       &--sub,
@@ -84,19 +81,45 @@
         font-size: 1.8rem;
       }
     }
+
+    @include respond(phone) {
+      padding: 3rem;
+
+      &--primary {
+        font-size: 3.5rem;
+      }
+
+      &--sub,
+      &--intro {
+        font-size: 1.7rem;
+      }
+    }
+  }
+
+  &_illustration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    img {
+      width: 100%;
+      max-width: 45rem;
+    }
   }
 }
 
 .next_button {
+  width: 100%;
   text-align: center;
   position: absolute;
-  left: 50%;
+  left: 0;
   bottom: 2%;
 
   .icon {
     font-size: 3.5rem;
-    color: #c40b13;
-    animation: scrolldown 2s ease-in-out infinite;
+    color: #2e2d41;
+    animation: scrolldown 1.5s ease-in-out infinite;
   }
 }
 

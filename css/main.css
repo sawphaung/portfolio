@@ -361,8 +361,8 @@ body {
           box-sizing: border-box;
   line-height: 1.7;
   letter-spacing: 2px;
-  font-family: "Ubuntu Mono", monospace;
-  background-color: ghostwhite;
+  font-family: "Open Sans", sans-serif;
+  background: #fff;
 }
 
 .spinner-wrapper {
@@ -450,34 +450,37 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 1em = 16px
 */
-.hero-video {
-  position: fixed;
-  z-index: -1;
-  opacity: 0.7;
+header {
+  position: relative;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #faf7ff;
+  padding: 0 10rem;
 }
 
-@media only screen and (max-width: 56.25em) {
-  .hero-video {
-    display: none;
+header > div {
+  width: 50%;
+}
+
+@media only screen and (max-width: 75em) {
+  header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 5rem 2rem 0;
   }
-}
-
-@media (min-aspect-ratio: 16 / 9) {
-  .hero-video {
+  header > div {
     width: 100%;
-    height: auto;
-  }
-}
-
-@media (max-aspect-ratio: 16 / 9) {
-  .hero-video {
-    width: auto;
-    height: 100%;
   }
 }
 
 .hero {
-  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -487,35 +490,26 @@ ORDER: Base + typography > general layout + grid > page layout > components
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
-  background-size: cover;
-}
-
-@media only screen and (max-width: 56.25em) {
-  .hero {
-    z-index: -1;
-    background-image: -webkit-gradient(linear, left bottom, left top, from(#d299c2), to(#fef9d7));
-    background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
-  }
 }
 
 .hero_heading {
   text-align: left;
-  padding: 3rem;
+  padding: 0 3rem;
 }
 
 .hero_heading--primary {
   display: block;
-  font-size: 10rem;
-  color: #c40b13;
+  font-size: 7rem;
+  color: #2e2d41;
   margin-left: -5px;
-  font-family: "Merienda", cursive;
+  line-height: 1;
+  padding: 2rem 0;
 }
 
 .hero_heading--sub, .hero_heading--intro {
-  font-weight: 500;
-  font-size: 2.5rem;
-  color: #c40b13;
+  font-weight: 700;
+  font-size: 2.2rem;
+  color: #3f3c56;
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -523,10 +517,10 @@ ORDER: Base + typography > general layout + grid > page layout > components
     padding: 3rem;
   }
   .hero_heading--primary {
-    font-size: 8rem;
+    font-size: 5rem;
   }
   .hero_heading--sub, .hero_heading--intro {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -535,25 +529,44 @@ ORDER: Base + typography > general layout + grid > page layout > components
     padding: 3rem;
   }
   .hero_heading--primary {
-    font-size: 6rem;
+    font-size: 3.5rem;
   }
   .hero_heading--sub, .hero_heading--intro {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
 }
 
+.hero_illustration {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.hero_illustration img {
+  width: 100%;
+  max-width: 45rem;
+}
+
 .next_button {
+  width: 100%;
   text-align: center;
   position: absolute;
-  left: 50%;
+  left: 0;
   bottom: 2%;
 }
 
 .next_button .icon {
   font-size: 3.5rem;
-  color: #c40b13;
-  -webkit-animation: scrolldown 2s ease-in-out infinite;
-          animation: scrolldown 2s ease-in-out infinite;
+  color: #2e2d41;
+  -webkit-animation: scrolldown 1.5s ease-in-out infinite;
+          animation: scrolldown 1.5s ease-in-out infinite;
 }
 
 @-webkit-keyframes scrolldown {
@@ -651,7 +664,7 @@ footer span i {
 
 .skills {
   padding: 1.5rem 0;
-  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  background: #3f3c56;
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -663,13 +676,12 @@ footer span i {
 .skills .section-heading {
   text-align: center;
   font-size: 6rem;
-  color: #c40b13;
+  color: #2e2d41;
   font-weight: bold;
 }
 
 .skills_icons {
-  width: 80%;
-  margin: 0 auto;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -682,11 +694,12 @@ footer span i {
       -ms-flex-align: center;
           align-items: center;
   font-size: 2rem;
-  color: #e42e2e;
+  color: #fff;
   padding: 2rem;
 }
 
 .skills_icons > span {
+  display: block;
   margin: 2rem 1rem;
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -718,7 +731,7 @@ footer span i {
 .contact .section-heading {
   text-align: center;
   font-size: 6rem;
-  color: #c40b13;
+  color: #2e2d41;
   font-weight: bold;
 }
 
@@ -727,7 +740,7 @@ footer span i {
 }
 
 .contact a {
-  color: #e42e2e;
+  color: #3f3c56;
   cursor: pointer;
 }
 
@@ -740,20 +753,33 @@ footer span i {
   .contact {
     padding: 10rem 1.5rem;
   }
+  .contact .section-heading {
+    font-size: 4rem;
+    padding-bottom: 1rem;
+  }
   .contact p {
     font-size: 2rem;
   }
 }
 
+@media only screen and (max-width: 37.5em) {
+  .contact {
+    padding: 10rem 1rem;
+  }
+  .contact p {
+    font-size: 1.6rem;
+  }
+}
+
 .projects {
   padding: 5rem 0 2rem;
-  background-color: #e7e9e6;
+  background-color: #fff;
 }
 
 .projects h2 {
   text-align: center;
   font-size: 6rem;
-  color: #c40b13;
+  color: #2e2d41;
   font-weight: bold;
 }
 
@@ -791,6 +817,7 @@ footer span i {
 .projects .project .contents_heading {
   padding: 2rem 0;
   font-size: 3.5rem;
+  text-align: left;
   font-weight: bolder;
 }
 
@@ -800,28 +827,28 @@ footer span i {
 }
 
 .projects .project .contents_button {
+  display: inline-block;
   outline: none;
+  width: 100%;
+  max-width: 15rem;
   background-color: transparent;
   border: 1px solid #000;
   color: #000;
-  border-radius: 15px;
-  display: inline-block;
-  font-size: 1.5rem;
-  font-weight: 400;
+  border-radius: 5px;
+  font-size: 1.4rem;
   line-height: 1.5;
   padding: 12px 30px;
   margin: 15px 0;
   margin-right: 20px;
   text-align: center;
   text-decoration: none;
-  vertical-align: middle;
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
 .projects .project .contents_button:hover {
-  background: red;
+  background: #2e2d41;
   color: #fff;
 }
 
