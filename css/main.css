@@ -451,6 +451,33 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 1em = 16px
 */
+.social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+  padding: 10px 20px;
+}
+
+.social-media a {
+  color: #dbdbdb;
+  font-size: 3rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.social-media a i {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #6c63ff;
+}
+
 header {
   position: relative;
   height: 80vh;
@@ -759,13 +786,13 @@ footer span i {
 .contact {
   padding: 10rem 0;
   text-align: center;
-  background: #faf7ff;
+  background: #17181c;
+  color: #dbdbdb;
 }
 
 .contact .section-heading {
   text-align: center;
   font-size: 6rem;
-  color: #2e2d41;
   font-weight: bold;
 }
 
@@ -774,7 +801,7 @@ footer span i {
 }
 
 .contact a {
-  color: #3f3c56;
+  color: #dbdbdb;
   cursor: pointer;
 }
 
@@ -807,7 +834,7 @@ footer span i {
 
 .projects {
   padding: 5rem 0 2rem;
-  background: #17181c;
+  background: #121212;
 }
 
 .projects h2 {
