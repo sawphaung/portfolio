@@ -24,10 +24,10 @@
 
 header {
   position: relative;
-  height: 100vh;
+  height: 80vh;
   display: flex;
   align-items: center;
-  background: #faf7ff;
+  background: #17181c;
   padding: 0 10rem;
 
   & > div {
@@ -35,12 +35,22 @@ header {
   }
 
   @include respond(tab-land) {
+    padding: 0 3.5rem;
+  }
+
+  @include respond(tab-port) {
     flex-direction: column;
-    padding: 5rem 2rem 0;
+    height: 85vh;
+    padding: 0 2rem;
 
     & > div {
       width: 100%;
     }
+  }
+
+  @include respond(phone) {
+    height: 80vh;
+    padding: 3rem 0;
   }
 }
 
@@ -51,12 +61,12 @@ header {
 
   &_heading {
     text-align: left;
-    padding: 0 3rem;
+    padding: 0 3rem 3rem;
 
     &--primary {
       display: block;
       font-size: 7rem;
-      color: #2e2d41;
+      color: #dbdbdb;
       margin-left: -5px;
       line-height: 1;
       padding: 2rem 0;
@@ -66,14 +76,20 @@ header {
     &--intro {
       font-weight: 700;
       font-size: 2.2rem;
-      color: #3f3c56;
+      color: #b5b5b5;
+    }
+
+    @include respond(tab-land) {
+      &--primary {
+        font-size: 5rem;
+      }
     }
 
     @include respond(tab-port) {
       padding: 3rem;
 
       &--primary {
-        font-size: 5rem;
+        font-size: 4rem;
       }
 
       &--sub,
@@ -100,10 +116,9 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
 
     img {
-      width: 100%;
+      width: 80%;
       max-width: 45rem;
     }
   }
@@ -118,7 +133,8 @@ header {
 
   .icon {
     font-size: 3.5rem;
-    color: #2e2d41;
+    // color: #2e2d41;
+    color: #dbdbdb;
     animation: scrolldown 1.5s ease-in-out infinite;
   }
 }

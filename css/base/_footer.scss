@@ -1,11 +1,17 @@
 footer {
   text-align: center;
   font-size: 1.5rem;
-  background-color: #eee;
+  //   background-color: #eee;
+  background: #121212;
   padding: 2rem 0;
 
+  p {
+    color: #dbdbdb;
+  }
+
   span {
-    color: red;
+    // color: red;
+    color: #dbdbdb;
 
     i {
       padding: 0 0.5rem;

@@ -1,10 +1,9 @@
 .skills {
   padding: 1.5rem 0;
-  //   background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-  background: $icon-color;
+  background: #0a0a0a;
 
   @include respond(tab-port) {
-    padding: 5rem 0;
+    padding: 2rem 0;
   }
 
   .section-heading {
@@ -21,16 +20,24 @@
     justify-content: space-between;
     align-items: center;
     font-size: 2rem;
-    color: $white;
-    padding: 2rem;
+    color: #dbdbdb;
+    padding: 2rem 0;
 
     & > span {
+      width: calc(100% / 6);
       display: block;
-      margin: 2rem 1rem;
-      flex: 1;
       text-align: center;
       cursor: pointer;
       transition: all 0.25s ease;
+
+      @include respond(tab-port) {
+        width: calc(100% / 3);
+        margin-bottom: 20px;
+      }
+
+      @include respond(phone) {
+        width: calc(100% / 2);
+      }
 
       &:hover {
         transform: scale(1.1);
@@ -44,52 +51,4 @@
       margin-bottom: 1rem;
     }
   }
-
-  //   .bio {
-  //     width: 80rem;
-  //     margin: 0 auto;
-  //     padding: 15rem 0;
-  //     display: flex;
-
-  //     @include respond(tab-port) {
-  //       width: 100%;
-  //       flex-direction: column;
-  //       flex-wrap: wrap;
-  //       text-align: center;
-  //     }
-
-  //     .avator {
-  //       border-radius: 5%;
-  //       width: 20rem;
-  //       height: 21rem;
-  //       order: 1;
-  //       //   box-shadow: 1px 1px 40px 0px rgba(0, 0, 0, 0.75);
-  //       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-
-  //       @include respond(tab-port) {
-  //         order: 0;
-  //         margin: 0 auto;
-  //         margin-bottom: 5rem;
-  //       }
-  //     }
-
-  //     .description {
-  //       padding-right: 7rem;
-  //       margin-top: -3rem;
-
-  //       p {
-  //         font-size: 2rem;
-  //         display: flex;
-  //         justify-content: center;
-  //         align-items: center;
-
-  //         height: 100%;
-  //       }
-
-  //       @include respond(tab-port) {
-  //         padding-right: 0;
-  //         padding: 0 3rem;
-  //       }
-  //     }
-  //   }
 }

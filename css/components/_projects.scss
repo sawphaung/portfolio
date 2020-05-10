@@ -1,12 +1,16 @@
 .projects {
   padding: 5rem 0 2rem;
-  background-color: $white;
+  background: #17181c;
 
   h2 {
     text-align: center;
     font-size: 6rem;
-    color: $heading-color;
+    color: #dbdbdb;
     font-weight: bold;
+
+    @include respond(phone) {
+      font-size: 4rem;
+    }
   }
 
   .project {
@@ -43,6 +47,7 @@
       &_tech {
         font-size: 1.8rem;
         padding-bottom: 1rem;
+        color: #dbdbdb;
       }
 
       &_button {
@@ -50,22 +55,22 @@
         outline: none;
         width: 100%;
         max-width: 15rem;
-        background-color: transparent;
-        border: 1px solid #000;
-        color: #000;
+        background: #0a0a0a;
+        border: 1px solid #b5b5b5;
+        color: #b5b5b5;
         border-radius: 5px;
         font-size: 1.4rem;
         line-height: 1.5;
         padding: 12px 30px;
-        margin: 15px 0;
-        margin-right: 20px;
+        margin: 15px auto;
+        margin-right: 10px;
         text-align: center;
         text-decoration: none;
         cursor: pointer;
-        transition: all 0.3s ease;
+        transition: all 0.25s ease;
 
         &:hover {
-          background: $heading-color;
+          border-color: #5ea3e4;
           color: #fff;
         }
       }
@@ -90,7 +95,8 @@
     }
 
     @include respond(phone) {
-      margin: 3rem 1rem;
+      margin: 3rem auto;
+      padding: 2rem 2.5rem;
     }
   }
 
