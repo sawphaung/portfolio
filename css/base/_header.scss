@@ -24,14 +24,13 @@
 
 .social-media {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   width: 100%;
   padding: 10px 20px;
 
   a {
     color: #dbdbdb;
     font-size: 3rem;
-
     transition: all 0.3s ease;
 
     i {
@@ -78,12 +77,15 @@ header {
 
 .hero {
   display: flex;
-  justify-content: center;
   align-items: center;
+
+  @include respond(tab-port) {
+    justify-content: center;
+  }
 
   &_heading {
     text-align: left;
-    padding: 0 3rem 3rem;
+    padding: 0 3rem 3rem 5rem;
 
     &--primary {
       display: block;
@@ -92,6 +94,14 @@ header {
       margin-left: -5px;
       line-height: 1;
       padding: 2rem 0;
+    }
+
+    @media screen and (max-width: 1500px) {
+      padding: 0 3rem 3rem 2rem;
+
+      &--primary {
+        font-size: 5rem;
+      }
     }
 
     &--sub,
@@ -103,7 +113,7 @@ header {
 
     @include respond(tab-land) {
       &--primary {
-        font-size: 5rem;
+        font-size: 4.5rem;
       }
     }
 
@@ -111,7 +121,7 @@ header {
       padding: 3rem;
 
       &--primary {
-        font-size: 4rem;
+        font-size: 3.5rem;
       }
 
       &--sub,
@@ -136,12 +146,12 @@ header {
 
   &_illustration {
     display: flex;
-    justify-content: center;
     align-items: center;
 
     img {
       width: 75%;
       max-width: 40rem;
+      margin: 0 auto;
     }
   }
 }

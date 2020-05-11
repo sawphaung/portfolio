@@ -455,9 +455,9 @@ ORDER: Base + typography > general layout + grid > page layout > components
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   width: 100%;
   padding: 10px 20px;
 }
@@ -526,17 +526,22 @@ header > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .hero {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .hero_heading {
   text-align: left;
-  padding: 0 3rem 3rem;
+  padding: 0 3rem 3rem 5rem;
 }
 
 .hero_heading--primary {
@@ -548,6 +553,15 @@ header > div {
   padding: 2rem 0;
 }
 
+@media screen and (max-width: 1500px) {
+  .hero_heading {
+    padding: 0 3rem 3rem 2rem;
+  }
+  .hero_heading--primary {
+    font-size: 5rem;
+  }
+}
+
 .hero_heading--sub, .hero_heading--intro {
   font-weight: 700;
   font-size: 2.2rem;
@@ -556,7 +570,7 @@ header > div {
 
 @media only screen and (max-width: 75em) {
   .hero_heading--primary {
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
 }
 
@@ -565,7 +579,7 @@ header > div {
     padding: 3rem;
   }
   .hero_heading--primary {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
   .hero_heading--sub, .hero_heading--intro {
     font-size: 1.8rem;
@@ -588,9 +602,6 @@ header > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -599,6 +610,7 @@ header > div {
 .hero_illustration img {
   width: 75%;
   max-width: 40rem;
+  margin: 0 auto;
 }
 
 .next_button {
