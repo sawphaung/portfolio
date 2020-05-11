@@ -460,6 +460,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 }
 
 .social-media {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -468,6 +469,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
           justify-content: flex-start;
   width: 100%;
   padding: 10px 20px;
+  z-index: 999;
 }
 
 .social-media a {
