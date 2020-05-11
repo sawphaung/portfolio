@@ -50,7 +50,12 @@
         </div>
 
         <div class="hero_illustration">
-          <img src="/assets/img/hero_image.svg" alt="" />
+          <img
+            src="/assets/img/hero_image.svg"
+            alt=""
+            data-tilt
+            data-tilt-full-page-listening
+          />
         </div>
       </header>
 
@@ -193,7 +198,7 @@
           <p>My inbox is always open.</p>
 
           <a href="mailto:sawshanphaung@icloud.com"
-            ><i class="far fa-envelope-open"></i
+            ><i class="far fa-envelope-open" data-tilt></i
           ></a>
         </section>
       </main>
@@ -208,6 +213,7 @@
 
     <script src="/js/particles.min.js"></script>
     <script src="/js/wow.min.js"></script>
+    <script src="/js/tilt.min.js"></script>
     <script>
       particlesJS.load(
         "particles-js",
@@ -216,21 +222,13 @@
           console.log("callback - particles.js config loaded");
         }
       );
-
+      // Scroll Effects
       new WOW().init();
-
+      // Site Loading
       var spinnerWrapper = document.querySelector(".spinner-wrapper");
       window.addEventListener("load", function () {
         spinnerWrapper.parentElement.removeChild(spinnerWrapper);
       });
-
-      //   var arrayImg = document.getElementById("list").children;
-
-      //   for (var i = 0; i < arrayImg.length; i++) {
-      //     arrayImg[i].onclick = function() {
-      //       document.getElementById("navi-toggle").checked = false;
-      //     };
-      //   }
     </script>
   </body>
 </html>
