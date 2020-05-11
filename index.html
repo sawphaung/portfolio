@@ -30,6 +30,8 @@
     </div>
 
     <div class="container">
+      <div id="particles-js"></div>
+
       <div class="social-media">
         <a href="https://www.linkedin.com/in/sawphaung/" target="_blank"
           ><i class="fab fa-linkedin"></i
@@ -50,12 +52,6 @@
         <div class="hero_illustration">
           <img src="/assets/img/hero_image.svg" alt="" />
         </div>
-
-        <!-- <div class="next_button">
-          <a href="#skills">
-            <i class="fas fa-chevron-down icon"></i>
-          </a>
-        </div> -->
       </header>
 
       <main>
@@ -209,8 +205,18 @@
         </p>
       </footer>
     </div>
+
+    <script src="/js/particles.min.js"></script>
     <script src="/js/wow.min.js"></script>
     <script>
+      particlesJS.load(
+        "particles-js",
+        "/js/particlesjs-config.json",
+        function () {
+          console.log("callback - particles.js config loaded");
+        }
+      );
+
       new WOW().init();
 
       var spinnerWrapper = document.querySelector(".spinner-wrapper");
