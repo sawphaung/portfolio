@@ -457,6 +457,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   left: 0;
   width: 100%;
   height: 90%;
+  z-index: 9999;
 }
 
 .social-media {
