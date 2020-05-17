@@ -19,7 +19,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    font-size: 2rem;
     color: #dbdbdb;
     padding: 2rem 0;
 
@@ -28,6 +27,7 @@
       display: block;
       text-align: center;
       cursor: pointer;
+      font-size: 1.6rem;
       transition: all 0.25s ease;
 
       @include respond(tab-port) {
@@ -37,6 +37,7 @@
 
       @include respond(phone) {
         width: calc(100% / 2);
+        font-size: 1.4rem;
       }
 
       &:hover {
@@ -49,6 +50,10 @@
       text-align: center;
       font-size: 6rem;
       margin-bottom: 1rem;
+
+      @include respond(phone) {
+        font-size: 4rem;
+      }
     }
   }
 }
