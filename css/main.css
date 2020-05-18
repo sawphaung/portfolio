@@ -465,9 +465,9 @@ ORDER: Base + typography > general layout + grid > page layout > components
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   width: 100%;
   padding: 10px 20px;
   z-index: 9999;
@@ -493,7 +493,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 header {
   position: relative;
-  height: 80vh;
+  height: 75vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -515,10 +515,7 @@ header > div {
 
 @media only screen and (max-width: 56.25em) {
   header {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    display: block;
     height: 85vh;
     padding: 0 2rem;
   }
@@ -529,31 +526,19 @@ header > div {
 
 @media only screen and (max-width: 37.5em) {
   header {
-    height: 80vh;
+    height: 100vh;
     padding: 3rem 0;
   }
 }
 
 .hero {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-@media only screen and (max-width: 56.25em) {
-  .hero {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
+  display: block;
 }
 
 .hero_heading {
   text-align: left;
-  padding: 0 3rem 3rem 5rem;
+  padding: 0 3rem 3rem 0;
+  letter-spacing: 0.05em;
 }
 
 .hero_heading--primary {
@@ -573,9 +558,6 @@ header > div {
 }
 
 @media screen and (max-width: 1500px) {
-  .hero_heading {
-    padding: 0 3rem 3rem 2rem;
-  }
   .hero_heading--primary {
     font-size: 5rem;
   }
@@ -600,9 +582,6 @@ header > div {
 }
 
 @media only screen and (max-width: 37.5em) {
-  .hero_heading {
-    padding: 3rem;
-  }
   .hero_heading--primary {
     font-size: 3.5rem;
   }
@@ -624,6 +603,40 @@ header > div {
   width: 75%;
   max-width: 40rem;
   margin: 0 auto;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .hero_illustration {
+    height: 65%;
+  }
+}
+
+.btn-contact {
+  position: relative;
+  text-decoration: none;
+  color: #dbdbdb;
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  font-weight: bold;
+  width: 100%;
+  max-width: 15rem;
+  border: 1px solid #b5b5b5;
+  padding: 12px 30px;
+  border-radius: 5px;
+  z-index: 9999999;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .btn-contact {
+    margin: 3rem;
+  }
+}
+
+.btn-contact:hover {
+  border-color: #5ea3e4;
+  color: #fff;
 }
 
 footer {
@@ -732,7 +745,6 @@ footer span i {
   width: calc(100% / 6);
   display: block;
   text-align: center;
-  cursor: pointer;
   font-size: 1.6rem;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
