@@ -493,7 +493,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 header {
   position: relative;
-  height: 75vh;
+  height: 70rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -516,7 +516,6 @@ header > div {
 @media only screen and (max-width: 56.25em) {
   header {
     display: block;
-    height: 85vh;
     padding: 0 2rem;
   }
   header > div {
@@ -526,7 +525,7 @@ header > div {
 
 @media only screen and (max-width: 37.5em) {
   header {
-    height: 100vh;
+    height: auto;
     padding: 3rem 0;
   }
 }
@@ -757,13 +756,6 @@ footer span i {
   }
 }
 
-@media only screen and (max-width: 37.5em) {
-  .skills_icons > span {
-    width: calc(100% / 2);
-    font-size: 1.4rem;
-  }
-}
-
 .skills_icons > span:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
@@ -853,12 +845,13 @@ footer span i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 10rem 5rem;
+  margin: 5rem;
   padding: 5rem;
   letter-spacing: 1px;
 }
 
 .projects .project .img {
+  position: relative;
   width: 100%;
   margin: 0 auto;
   background: #121212;
@@ -868,30 +861,101 @@ footer span i {
 }
 
 .projects .project .img img {
-  max-width: 90%;
+  max-width: 100%;
   height: 100%;
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.projects .project .img::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.projects .project .animateImg {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 40rem;
+  margin: 0 auto;
+  -webkit-animation: animateImage 100s linear infinite;
+          animation: animateImage 100s linear infinite;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+@media only screen and (max-width: 56.25em) {
+  .projects .project .animateImg {
+    height: 25rem;
+  }
+}
+
+.projects .project .animateImg-1 {
+  background: url("/assets/img/CDMTool.jpg") no-repeat;
+  background-size: cover;
+}
+
+.projects .project .animateImg-2 {
+  background: url("/assets/img/DornbrookConstruction.jpg") no-repeat;
+  background-size: cover;
+}
+
+.projects .project .animateImg-3 {
+  background: url("/assets/img/ASP.jpg") no-repeat;
+  background-size: cover;
+}
+
+.projects .project .animateImg::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .projects .project .contents {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  margin: 0 5rem;
 }
 
 .projects .project .contents_heading {
-  padding: 2rem 0;
+  position: relative;
+  padding: 2rem 0 1rem;
+  line-height: 1.5;
   font-size: 3.5rem;
   text-align: left;
   font-weight: bolder;
+}
+
+.projects .project .contents_heading::after {
+  content: "";
+  display: block;
+  width: 15rem;
+  height: 0.7rem;
+  margin: 0.5rem 0;
+  background: #dbdbdb;
 }
 
 .projects .project .contents_description, .projects .project .contents_tech {
   font-size: 1.8rem;
   padding-bottom: 1rem;
   color: #dbdbdb;
+}
+
+.projects .project .contents_description span, .projects .project .contents_tech span {
+  display: block;
+  font-size: 1.6rem;
 }
 
 .projects .project .contents_button {
@@ -920,6 +984,24 @@ footer span i {
   color: #fff;
 }
 
+.projects .project-1 .contents,
+.projects .project-3 .contents,
+.projects .project-5 .contents {
+  margin-left: 5rem;
+}
+
+.projects .project-2 .animateImg,
+.projects .project-4 .animateImg {
+  margin-left: 4rem;
+}
+
+@media only screen and (max-width: 75em) {
+  .projects .project-2 .animateImg,
+  .projects .project-4 .animateImg {
+    margin-left: 0;
+  }
+}
+
 @media only screen and (max-width: 75em) {
   .projects .project {
     display: block;
@@ -943,10 +1025,32 @@ footer span i {
   }
 }
 
-.projects .project-1 .img,
-.projects .project-3 .img {
+.projects .project-2 .animateImg,
+.projects .project-4 .img {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
+}
+
+@-webkit-keyframes animateImage {
+  0%,
+  100% {
+    background-position: top;
+  }
+  45%,
+  55% {
+    background-position: bottom;
+  }
+}
+
+@keyframes animateImage {
+  0%,
+  100% {
+    background-position: top;
+  }
+  45%,
+  55% {
+    background-position: bottom;
+  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -34,10 +34,10 @@
         margin-bottom: 20px;
       }
 
-      @include respond(phone) {
-        width: calc(100% / 2);
-        font-size: 1.4rem;
-      }
+      //   @include respond(phone) {
+      //     width: calc(100% / 2);
+      //     font-size: 1.4rem;
+      //   }
 
       &:hover {
         transform: scale(1.1);
