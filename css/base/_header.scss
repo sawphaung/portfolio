@@ -56,7 +56,6 @@ header {
   }
 
   @include respond(phone) {
-    height: auto;
     padding: 3rem 0;
   }
 }
