@@ -597,9 +597,9 @@ header > div {
           align-items: center;
 }
 
-.hero_illustration img {
-  width: 75%;
-  max-width: 40rem;
+.hero_illustration svg {
+  width: 100%;
+  max-width: 80rem;
   margin: 0 auto;
 }
 
