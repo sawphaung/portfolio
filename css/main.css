@@ -854,6 +854,9 @@ footer span i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   height: 100%;
   margin: 0 auto;
   background: #121212;
