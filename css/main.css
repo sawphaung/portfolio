@@ -366,6 +366,24 @@ body {
   overflow-x: hidden !important;
 }
 
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .spinner-wrapper {
   height: 100vh;
   display: -webkit-box;
@@ -461,7 +479,9 @@ ORDER: Base + typography > general layout + grid > page layout > components
 }
 
 .social-media {
-  position: relative;
+  position: absolute;
+  right: 20px;
+  top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -500,7 +520,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 8rem 10rem 0;
+  padding: 0 8rem;
 }
 
 header > div {
@@ -548,7 +568,6 @@ header > div {
   color: #dbdbdb;
   margin-left: -5px;
   line-height: 1.2;
-  padding: 2rem 0;
 }
 
 .hero_heading--second {
@@ -556,7 +575,7 @@ header > div {
   color: #fff;
   font-size: 1.8rem;
   opacity: 0.7;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .hero_heading--second a {
@@ -628,8 +647,8 @@ header > div {
 }
 
 @media only screen and (max-width: 56.25em) {
-  .hero_illustration {
-    height: 65%;
+  .hero_illustration svg {
+    height: auto;
   }
 }
 
