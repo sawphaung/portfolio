@@ -367,21 +367,8 @@ body {
 }
 
 .container {
-  min-height: 100vh;
+  height: 85vh;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .spinner-wrapper {
@@ -681,9 +668,6 @@ header > div {
 }
 
 footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
   width: 100%;
   text-align: center;
   font-size: 1.5rem;
@@ -752,7 +736,7 @@ footer span i {
 }
 
 .skills {
-  padding: 1.5rem 0;
+  padding: 1rem 0;
   background: #0a0a0a;
 }
 
@@ -764,7 +748,7 @@ footer span i {
 
 .skills .section-heading {
   text-align: center;
-  font-size: 6rem;
+  font-size: 4rem;
   color: #2e2d41;
   font-weight: bold;
 }
@@ -783,14 +767,14 @@ footer span i {
       -ms-flex-align: center;
           align-items: center;
   color: #dbdbdb;
-  padding: 2rem 0;
+  padding: 1rem 0;
 }
 
 .skills_icons > span {
   width: calc(100% / 6);
   display: block;
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
@@ -810,8 +794,8 @@ footer span i {
 .skills_icons .fab {
   display: block;
   text-align: center;
-  font-size: 6rem;
-  margin-bottom: 1rem;
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
 }
 
 @media only screen and (max-width: 37.5em) {
@@ -823,7 +807,7 @@ footer span i {
 .contact {
   padding: 10rem 0;
   text-align: center;
-  background: #17181c;
+  background: #0a0a0a;
   color: #dbdbdb;
 }
 
@@ -1183,5 +1167,111 @@ footer span i {
   55% {
     background-position: bottom;
   }
+}
+
+.newProjects-wrapper {
+  width: 100%;
+  padding: 10rem 0;
+  margin: auto;
+}
+
+.newProjects-wrapper h2 {
+  text-align: center;
+  font-size: 6rem;
+  color: #dbdbdb;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .newProjects-wrapper h2 {
+    font-size: 4rem;
+  }
+}
+
+.newProjects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.newProjects > .project {
+  display: block;
+  position: relative;
+  width: calc(100% / 3 - 30px);
+  margin: 0 15px 30px;
+  height: 262px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background: #0a0a0a;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.newProjects > .project span {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: #333;
+  color: #fff;
+  font-size: 10px;
+  padding: 5px;
+}
+
+.newProjects > .project::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.newProjects > .project:hover::after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+}
+
+@media screen and (max-width: 1380px) {
+  .newProjects > .project {
+    width: calc(100% / 2 - 20px);
+    margin: 0 10px 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .newProjects > .project {
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto 20px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .newProjects > .project {
+    height: 220px;
+  }
+}
+
+.newProjects > .project img {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
 }
 /*# sourceMappingURL=main.css.map */

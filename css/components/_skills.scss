@@ -1,5 +1,5 @@
 .skills {
-  padding: 1.5rem 0;
+  padding: 1rem 0;
   background: #0a0a0a;
 
   @include respond(tab-port) {
@@ -8,7 +8,7 @@
 
   .section-heading {
     text-align: center;
-    font-size: 6rem;
+    font-size: 4rem;
     color: $heading-color;
     font-weight: bold;
   }
@@ -20,13 +20,13 @@
     justify-content: space-between;
     align-items: center;
     color: #dbdbdb;
-    padding: 2rem 0;
+    padding: 1rem 0;
 
     & > span {
       width: calc(100% / 6);
       display: block;
       text-align: center;
-      font-size: 1.6rem;
+      font-size: 1.4rem;
       transition: all 0.25s ease;
 
       @include respond(tab-port) {
@@ -47,8 +47,8 @@
     .fab {
       display: block;
       text-align: center;
-      font-size: 6rem;
-      margin-bottom: 1rem;
+      font-size: 4rem;
+      margin-bottom: 0.5rem;
 
       @include respond(phone) {
         font-size: 4rem;
