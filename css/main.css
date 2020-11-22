@@ -366,6 +366,32 @@ body {
   overflow-x: hidden !important;
 }
 
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.wrapper h1 {
+  text-align: center;
+  font-size: 36px;
+  color: #fff;
+  padding: 0 10px;
+}
+
+@media screen and (max-width: 1000px) {
+  .wrapper h1 {
+    font-size: 26px;
+  }
+}
+
 .container {
   height: 85vh;
   width: 100%;
