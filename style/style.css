@@ -1,0 +1,540 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-color: #181f1c #000;
+}
+
+body {
+  position: relative;
+  min-width: 350px;
+  max-width: 2000px;
+  max-height: 100vh;
+  margin: 0 auto;
+  overflow-x: hidden;
+  font-family: "Fira Code", monospace;
+  letter-spacing: 0.05em;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+a {
+  text-underline-position: under;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+nav {
+  position: absolute;
+  right: 30px;
+  top: 35px;
+  z-index: 999;
+}
+
+@media screen and (max-width: 1280px) {
+  nav {
+    top: 20px;
+    right: 20px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  nav {
+    display: none;
+  }
+}
+
+nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav ul li {
+  margin: 20px 35px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  padding: 5px;
+  font-family: "Fira Code", monospace;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #9ea93f;
+  -webkit-text-decoration: underline #9ea93f;
+          text-decoration: underline #9ea93f;
+}
+
+nav ul li:hover ~ .cursor {
+  width: 55px;
+  height: 55px;
+  border-color: orangered;
+}
+
+.headerSection {
+  position: relative;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 1280px) {
+  .headerSection {
+    display: block;
+    height: auto;
+  }
+}
+
+.headerSection .hero-wrapper,
+.headerSection .hero-illustration {
+  position: relative;
+  z-index: 1;
+  width: calc(100% / 2);
+}
+
+@media screen and (max-width: 1280px) {
+  .headerSection .hero-wrapper,
+  .headerSection .hero-illustration {
+    width: 100%;
+  }
+}
+
+.headerSection .heroVideo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+}
+
+.headerSection::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+@media screen and (max-width: 1280px) {
+  .headerSection .hero-wrapper {
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 100px;
+  }
+}
+
+.headerSection .hero-wrapper .hero-heading {
+  padding-left: 10%;
+  margin-top: -5vw;
+}
+
+@media screen and (max-width: 1280px) {
+  .headerSection .hero-wrapper .hero-heading {
+    margin-top: 0;
+    padding: 25px;
+    text-align: center;
+  }
+}
+
+.headerSection .hero-wrapper .hero-heading_first {
+  font-size: 5vw;
+  font-size: clamp(32px, 5vw, 100px);
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.headerSection .hero-wrapper .hero-heading_second {
+  margin-bottom: 5px;
+}
+
+.headerSection .hero-wrapper .hero-heading_second, .headerSection .hero-wrapper .hero-heading_des {
+  display: block;
+  font-weight: 400;
+  font-family: "Fira Code", monospace;
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+@media screen and (max-width: 640px) {
+  .headerSection .hero-wrapper .hero-heading_second, .headerSection .hero-wrapper .hero-heading_des {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .headerSection .hero-wrapper .hero-heading_second, .headerSection .hero-wrapper .hero-heading_des {
+    font-size: 14px;
+  }
+}
+
+.headerSection .hero-wrapper .hero-heading_second a, .headerSection .hero-wrapper .hero-heading_des a {
+  color: #9ea93f;
+  text-underline-position: under;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.headerSection .hero-wrapper .hero-heading_second a:hover, .headerSection .hero-wrapper .hero-heading_des a:hover {
+  color: #60712f;
+}
+
+.headerSection .hero-illustration svg {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 1280px) {
+  .headerSection .hero-illustration {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .headerSection .hero-illustration {
+    margin-top: -20%;
+  }
+}
+
+.headerSection .wave {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  max-width: 100%;
+  z-index: -1;
+  fill: #181f1c;
+}
+
+.portfolioSection {
+  padding: 100px 0;
+  background: #121212;
+}
+
+.portfolioSection h2 {
+  text-align: center;
+  letter-spacing: 0.06em;
+  font-size: 45px;
+  text-transform: uppercase;
+  font-family: "Fira Code", monospace;
+  word-spacing: -0.2em;
+}
+
+@media screen and (max-width: 1280px) {
+  .portfolioSection h2 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .portfolioSection h2 {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .portfolioSection h2 {
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .portfolioSection h2 {
+    font-size: 25px;
+  }
+}
+
+.portfolioSection .inner-wrap {
+  margin: 0 5%;
+}
+
+.projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 60px -10px;
+}
+
+.projects .project {
+  position: relative;
+  width: calc(100% / 3 - 20px);
+  margin: 0 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1100px) {
+  .projects .project {
+    width: calc(100% / 2 - 20px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .projects .project {
+    width: calc(100% - 20px);
+  }
+}
+
+.projects .project .image-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-height: 280px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 640px) {
+  .projects .project .image-wrap {
+    max-height: auto;
+  }
+}
+
+.projects .project .image-wrap::after {
+  content: "Designed by iNET-Web";
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  padding: 5px 10px;
+  font-size: 10px;
+  color: #fff;
+  background: #9ea93f;
+}
+
+.projects .project .image-wrap img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.projects .project span {
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  padding: 15px 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1500px) {
+  .projects .project span {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 1320px) {
+  .projects .project span {
+    font-size: 14px;
+  }
+}
+
+.projects .project:hover .image-wrap img {
+  opacity: 0.8;
+}
+
+.projects .project:hover span {
+  color: #9ea93f;
+  -webkit-text-decoration: underline #9ea93f;
+          text-decoration: underline #9ea93f;
+}
+
+.contactSection {
+  padding: 100px 25px;
+  text-align: center;
+  background: #181f1c;
+}
+
+.contactSection h2 {
+  text-align: center;
+  letter-spacing: 0.06em;
+  font-size: 45px;
+  text-transform: uppercase;
+  font-family: "Fira Code", monospace;
+  word-spacing: -0.2em;
+}
+
+@media screen and (max-width: 1280px) {
+  .contactSection h2 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .contactSection h2 {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contactSection h2 {
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .contactSection h2 {
+    font-size: 25px;
+  }
+}
+
+.contactSection p {
+  margin-block: 1em;
+  line-height: 1.7;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 740px) {
+  .contactSection p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contactSection p {
+    font-size: 14px;
+  }
+}
+
+.contactSection .mail i {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 50px;
+  color: #fff;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.contactSection .mail i:hover {
+  color: #9ea93f;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  background: #121212;
+  padding: 20px 0;
+  color: #fff;
+}
+
+footer i {
+  margin-right: 10px;
+  color: #ff0000;
+  -webkit-animation: heartbeat 0.7s ease-in infinite;
+          animation: heartbeat 0.7s ease-in infinite;
+}
+
+.cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: width 0.2s, height 0.2s;
+  transition: width 0.2s, height 0.2s;
+}
+
+@-webkit-keyframes heartbeat {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  25% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  50% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+  75% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes heartbeat {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  25% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  50% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+  75% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+/*# sourceMappingURL=style.css.map */
