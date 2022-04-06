@@ -169,7 +169,7 @@ nav {
     top: 0;
     width: 100%;
     height: 100%;
-    background: rgba($black, 0.6);
+    background: rgba($black, 0.5);
   }
 
   // Headline
@@ -284,7 +284,7 @@ nav {
   // project
   .project {
     position: relative;
-    width: calc(100% / 3 - 20px);
+    width: calc(100% / 4 - 20px);
     margin: 0 10px 20px;
     text-align: center;
     text-decoration: none;
@@ -309,6 +309,12 @@ nav {
         max-height: auto;
       }
 
+      &.react {
+          &:after {
+              content: "Personal Project";
+          }
+      }
+
       &::after {
         content: "Designed by iNET-Web";
         display: inline-block;
@@ -330,6 +336,8 @@ nav {
         transition: all 0.3s ease;
       }
     }
+
+    
 
     span {
       display: block;

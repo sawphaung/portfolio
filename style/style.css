@@ -143,7 +143,7 @@ nav ul li:hover ~ .cursor {
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 @media screen and (max-width: 1280px) {
@@ -303,7 +303,7 @@ nav ul li:hover ~ .cursor {
 
 .projects .project {
   position: relative;
-  width: calc(100% / 3 - 20px);
+  width: calc(100% / 4 - 20px);
   margin: 0 10px 20px;
   text-align: center;
   text-decoration: none;
@@ -335,6 +335,10 @@ nav ul li:hover ~ .cursor {
   .projects .project .image-wrap {
     max-height: auto;
   }
+}
+
+.projects .project .image-wrap.react:after {
+  content: "Personal Project";
 }
 
 .projects .project .image-wrap::after {
