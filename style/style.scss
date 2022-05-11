@@ -193,10 +193,10 @@ nav {
       }
 
       &_first {
-        font-size: 5vw;
-        font-size: clamp(32px, 5vw, 100px);
+        font-size: 3.57vw;
+        font-size: clamp(32px, 3.57vw, 60px);
         font-weight: bold;
-        line-height: 1.5;
+        line-height: 1.3;
       }
 
       &_second {
@@ -310,9 +310,9 @@ nav {
       }
 
       &.react {
-          &:after {
-              content: "Personal Project";
-          }
+        &:after {
+          content: "Personal Project";
+        }
       }
 
       &::after {
@@ -336,8 +336,6 @@ nav {
         transition: all 0.3s ease;
       }
     }
-
-    
 
     span {
       display: block;
