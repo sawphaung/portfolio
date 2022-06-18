@@ -21,11 +21,21 @@ $black: #000;
 // mixins
 @mixin sub-heading {
   text-align: center;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   font-size: 45px;
   text-transform: uppercase;
   font-family: $secondary-font;
   word-spacing: -0.2em;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    max-width: 150px;
+    height: 7px;
+    margin: 20px auto;
+    background: $hover-color;
+  }
 
   @media screen and (max-width: 1280px) {
     font-size: 40px;
@@ -62,7 +72,7 @@ body {
   margin: 0 auto;
   overflow-x: hidden;
   font-family: $secondary-font;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.03em;
   color: $white;
   overflow-x: hidden;
 }
@@ -76,25 +86,84 @@ img {
   max-width: 100%;
 }
 
+// Buttons
+.button-cta {
+  display: block;
+  text-decoration: none;
+  width: 100%;
+  max-width: 230px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 16px;
+  text-align: center;
+  color: $white;
+  border-radius: 3px;
+  outline: 2.5px solid $hover-color;
+  outline-offset: -2.5px;
+  margin-left: 10%;
+  margin-top: 30px;
+  transition: all 0.3s ease;
+
+  @media screen and (max-width: 1280px) {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  &:hover {
+    background: $bg-color;
+    outline-color: $link-color;
+  }
+}
+
 // Navigation
 nav {
   position: absolute;
   right: 30px;
   top: 35px;
   z-index: 999;
+  width: 100%;
+  display: flex;
 
   @media screen and (max-width: 1280px) {
     top: 20px;
     right: 20px;
   }
 
-  @media screen and (max-width: 740px) {
-    display: none;
+  // Logo
+  .logo {
+    margin-right: auto;
+    margin-left: 6.5%;
+
+    @media screen and (max-width: 480px) {
+      padding-left: 15px;
+    }
+
+    a {
+      position: relative;
+      display: block;
+
+      img {
+        display: block;
+        width: 100%;
+        max-width: 50px;
+        opacity: 0.8;
+        transition: all 0.3s ease-in-out;
+      }
+
+      &:hover img {
+        transform: scale(1.1);
+      }
+    }
   }
 
+  // Nav Lists
   ul {
     list-style: none;
     display: flex;
+
+    @media screen and (max-width: 740px) {
+      display: none;
+    }
 
     li {
       margin: 20px 35px;
@@ -174,9 +243,13 @@ nav {
 
   // Headline
   .hero-wrapper {
+    position: relative;
+    z-index: 9;
+
     @media screen and (max-width: 1280px) {
       height: auto;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       padding-top: 100px;
@@ -188,13 +261,13 @@ nav {
 
       @media screen and (max-width: 1280px) {
         margin-top: 0;
-        padding: 25px;
+        padding: 25px 25px 0;
         text-align: center;
       }
 
       &_first {
-        font-size: 3.57vw;
-        font-size: clamp(32px, 3.57vw, 60px);
+        font-size: 2.85vw;
+        font-size: clamp(28px, 2.85vw, 55px);
         font-weight: bold;
         line-height: 1.3;
       }
@@ -208,11 +281,11 @@ nav {
         display: block;
         font-weight: 400;
         font-family: $secondary-font;
-        font-size: 20px;
+        font-size: 18px;
         line-height: 1.7;
 
         @media screen and (max-width: 640px) {
-          font-size: 18px;
+          font-size: 15px;
         }
 
         @media screen and (max-width: 480px) {
@@ -279,30 +352,41 @@ nav {
 .projects {
   display: flex;
   flex-wrap: wrap;
-  margin: 60px -10px;
+  justify-content: center;
+  margin: 60px -5px;
 
   // project
   .project {
     position: relative;
-    width: calc(100% / 4 - 20px);
-    margin: 0 10px 20px;
+    width: calc(100% / 5 - 10px);
+    margin: 0 5px 10px;
     text-align: center;
     text-decoration: none;
     transition: all 0.3s ease;
 
+    @media screen and (max-width: 1500px) {
+      width: calc(100% / 4 - 10px);
+    }
+
     @media screen and (max-width: 1100px) {
-      width: calc(100% / 2 - 20px);
+      width: calc(100% / 3 - 10px);
+    }
+
+    @media screen and (max-width: 740px) {
+      width: calc(100% / 2 - 10px);
     }
 
     @media screen and (max-width: 480px) {
-      width: calc(100% - 20px);
+      width: calc(100% - 10px);
     }
 
     .image-wrap {
       position: relative;
       width: 100%;
       height: 100%;
-      max-height: 280px;
+      max-height: 180px;
+      overflow: hidden;
+      border-radius: 3px;
       overflow: hidden;
 
       @media screen and (max-width: 640px) {
@@ -317,14 +401,19 @@ nav {
 
       &::after {
         content: "Designed by iNET-Web";
+        font-family: inherit;
         display: inline-block;
         position: absolute;
         bottom: 0;
         right: 0;
         text-align: center;
-        padding: 5px 10px;
+        padding: 3px 7px;
         font-size: 10px;
+        font-weight: 400;
         color: $white;
+        line-height: 1;
+        letter-spacing: 0.01em;
+        border-top-left-radius: 3px;
         background: $hover-color;
       }
 
@@ -340,10 +429,12 @@ nav {
     span {
       display: block;
       text-align: center;
-      font-size: 16px;
-      font-weight: bold;
+      font-size: 14px;
+      font-weight: 400;
       color: $white;
-      padding: 15px 0;
+      padding: 10px 0;
+      text-overflow: ellipsis;
+      overflow: hidden;
       transition: all 0.3s ease;
 
       @media screen and (max-width: 1500px) {
@@ -383,6 +474,7 @@ nav {
     margin-block: 1em;
     line-height: 1.7;
     font-size: 18px;
+    padding-top: 10px;
 
     @media screen and (max-width: 740px) {
       font-size: 16px;

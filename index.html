@@ -20,7 +20,9 @@
 
     <!-- Navigation -->
     <nav>
+        <div class="logo"><a href="/"><img src="/image/code.png" alt="Saw Phaung - Front End Developer"></a></div>
         <ul>
+
             <li><a href="#Projects">Projects</a></li>
             <li><a href="#Contact">Contact</a></li>
             <div class="cursor"></div>
@@ -35,12 +37,14 @@
 
         <div class="hero-wrapper">
             <h1 class="hero-heading">
-                <span class="hero-heading_first">Hi, I'm Saw Phaung!</span>
+                <span class="hero-heading_first">Hello, I'm Saw Phaung.</span>
                 <span class="hero-heading_second">
-                    Front-End Developer from Milwaukee, WI</span>
+                    Front-End Developer from Milwaukee, WI.</span>
                 <span class="hero-heading_des">Currently working at
-                    <a href="https://www.inet-web.com" target="_blank">iNET-Web</a></span>
+                    <a href="https://www.inet-web.com" target="_blank">iNET-Web</a>.</span>
             </h1>
+
+            <a class="button-cta" href="#Projects">View my work</a>
         </div>
 
         <div class="hero-illustration">
@@ -169,8 +173,6 @@
 
     </section>
 
-
-
     <!-- Portfolio Section -->
     <section id="Projects" class="portfolioSection">
         <h2>Recent Projects</h2>
@@ -283,6 +285,34 @@
                     <span>www.milwaukee-jewelry.com</span>
                 </a>
 
+                <a href="https://www.belaireflowers.com/" target="_blank" class="project">
+                    <div class="image-wrap">
+                        <img src="./image/BelAireFlowers.png" alt="">
+                    </div>
+                    <span>www.belaireflowers.com</span>
+                </a>
+
+                <a href="https://www.boldtsmithpackagingconsultants.com/" target="_blank" class="project">
+                    <div class="image-wrap">
+                        <img src="./image/bothSmithPackaging.png" alt="">
+                    </div>
+                    <span>www.boldtsmithpackagingconsultants.com</span>
+                </a>
+
+                <a href="https://fly.inetwd.com/" target="_blank" class="project">
+                    <div class="image-wrap">
+                        <img src="./image/FlyFisher.png" alt="">
+                    </div>
+                    <span>www.theflyfishers.com</span>
+                </a>
+
+                <a href="https://vrtl.inetwd.com/" target="_blank" class="project">
+                    <div class="image-wrap">
+                        <img src="./image/vrtlSpace.png" alt="">
+                    </div>
+                    <span>www.vrtlspace.comspan>
+                </a>
+
                 <a href="https://movie-finder-sawphaung.vercel.app/" target="_blank" class="project">
                     <div class="image-wrap react">
                         <img src="./image/movie-finder.png" alt="" title="">
@@ -312,10 +342,10 @@
         <p><span><i class="fas fa-heart"></i></span>Designed by Saw Phaung</p>
     </footer>
 
-
-
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167047723-1"></script>
+
+    <!-- gTag -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() {
@@ -326,6 +356,8 @@
         gtag("config", "UA-167047723-1");
     </script>
 
+
+    <!-- Link Hover -->
     <script>
         const mouse = document.querySelector(".cursor");
         document.addEventListener("mousemove", (e) => {
