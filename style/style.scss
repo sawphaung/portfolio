@@ -193,6 +193,33 @@ nav {
   }
 }
 
+// Social Wrap
+.socialWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 25px;
+
+  a {
+    display: block;
+    margin: 0 15px;
+    transition: all 0.3s ease;
+
+    i {
+      display: block;
+      color: $white;
+      font-size: 26px;
+      transition: all 0.3s ease;
+    }
+
+    &:hover {
+      i {
+        color: $hover-color;
+      }
+    }
+  }
+}
+
 // Header section
 .headerSection {
   position: relative;
@@ -266,10 +293,15 @@ nav {
       }
 
       &_first {
-        font-size: 2.85vw;
-        font-size: clamp(28px, 2.85vw, 55px);
+        font-size: clamp(32px, 3.385vw, 65px);
         font-weight: bold;
         line-height: 1.3;
+
+        small {
+          font-size: 18px;
+          display: block;
+          font-weight: 400;
+        }
       }
 
       &_second {

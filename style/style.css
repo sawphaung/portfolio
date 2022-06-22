@@ -152,6 +152,36 @@ nav ul li:hover ~ .cursor {
   border-color: orangered;
 }
 
+.socialWrap {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 25px;
+}
+
+.socialWrap a {
+  display: block;
+  margin: 0 15px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.socialWrap a i {
+  display: block;
+  color: #fff;
+  font-size: 26px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.socialWrap a:hover i {
+  color: #9ea93f;
+}
+
 .headerSection {
   position: relative;
   height: 100vh;
@@ -250,10 +280,15 @@ nav ul li:hover ~ .cursor {
 }
 
 .headerSection .hero-wrapper .hero-heading_first {
-  font-size: 2.85vw;
-  font-size: clamp(28px, 2.85vw, 55px);
+  font-size: clamp(32px, 3.385vw, 65px);
   font-weight: bold;
   line-height: 1.3;
+}
+
+.headerSection .hero-wrapper .hero-heading_first small {
+  font-size: 18px;
+  display: block;
+  font-weight: 400;
 }
 
 .headerSection .hero-wrapper .hero-heading_second {
