@@ -1,0 +1,18 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+   imagePath: string;
+   name: string;
+   href: string;
+}
+
+const { href, imagePath, name } = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg,jpg,png,gif}');
+---
+ <a href={href} class="project" target="_blank">
+    <div class="image-wrap">
+        <Image src={images[imagePath]()} alt="" width={550} />
+    </div>
+    <span>{name}</span>               
+</a>
