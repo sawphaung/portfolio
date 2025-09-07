@@ -3,8 +3,7 @@
 *::after {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -49,17 +48,14 @@ img {
   outline-offset: -2.5px;
   margin-left: 10%;
   margin-top: 30px;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-
 @media screen and (max-width: 1280px) {
   .button-cta {
     margin-left: 0;
     margin-top: 0;
   }
 }
-
 .button-cta:hover {
   background: #181f1c;
   outline-color: #60712f;
@@ -71,84 +67,63 @@ nav {
   top: 35px;
   z-index: 999;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
 }
-
 @media screen and (max-width: 1280px) {
   nav {
     top: 20px;
     right: 20px;
   }
 }
-
 nav .logo {
   margin-right: auto;
   margin-left: 6.5%;
 }
-
 @media screen and (max-width: 480px) {
   nav .logo {
     padding-left: 15px;
   }
 }
-
 nav .logo a {
   position: relative;
   display: block;
 }
-
 nav .logo a img {
   display: block;
   width: 100%;
   max-width: 50px;
   opacity: 0.8;
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-
 nav .logo a:hover img {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
-
 nav ul {
   list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 @media screen and (max-width: 740px) {
   nav ul {
     display: none;
   }
 }
-
 nav ul li {
   margin: 20px 35px;
 }
-
 nav ul li a {
   text-decoration: none;
   color: #fff;
   font-size: 20px;
   padding: 5px;
   font-family: "Fira Code", monospace;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-
 nav ul li a:hover {
   color: #9ea93f;
   -webkit-text-decoration: underline #9ea93f;
           text-decoration: underline #9ea93f;
 }
-
 nav ul li:hover ~ .cursor {
   width: 55px;
   height: 55px;
@@ -157,30 +132,22 @@ nav ul li:hover ~ .cursor {
 
 .socialWrap {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   margin-left: 25px;
 }
-
 .socialWrap a {
   display: block;
   margin: 0 15px;
-  -webkit-transition: all 0.3s ease;
+  text-decoration: none;
   transition: all 0.3s ease;
 }
-
 .socialWrap a i {
   display: block;
   color: #fff;
   font-size: 26px;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-
 .socialWrap a:hover i {
   color: #9ea93f;
 }
@@ -188,40 +155,29 @@ nav ul li:hover ~ .cursor {
 .headerSection {
   position: relative;
   height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
-
 @media screen and (max-width: 1280px) {
   .headerSection {
     display: block;
     height: auto;
   }
 }
-
 .headerSection .hero-wrapper,
 .headerSection .hero-illustration {
   position: relative;
   z-index: 1;
-  width: calc(100% / 2);
+  width: 50%;
 }
-
 @media screen and (max-width: 1280px) {
   .headerSection .hero-wrapper,
   .headerSection .hero-illustration {
     width: 100%;
   }
 }
-
 .headerSection .heroVideo {
   position: absolute;
   left: 0;
@@ -232,7 +188,6 @@ nav ul li:hover ~ .cursor {
      object-fit: cover;
   z-index: -1;
 }
-
 .headerSection::before {
   content: "";
   display: block;
@@ -243,37 +198,24 @@ nav ul li:hover ~ .cursor {
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
 }
-
 .headerSection .hero-wrapper {
   position: relative;
   z-index: 9;
 }
-
 @media screen and (max-width: 1280px) {
   .headerSection .hero-wrapper {
     height: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding-top: 100px;
   }
 }
-
 .headerSection .hero-wrapper .hero-heading {
   padding-left: 10%;
   margin-top: -5vw;
 }
-
 @media screen and (max-width: 1280px) {
   .headerSection .hero-wrapper .hero-heading {
     margin-top: 0;
@@ -281,78 +223,62 @@ nav ul li:hover ~ .cursor {
     text-align: center;
   }
 }
-
 .headerSection .hero-wrapper .hero-heading_first {
   font-size: clamp(32px, 3.385vw, 65px);
   font-weight: bold;
   line-height: 1.3;
 }
-
 .headerSection .hero-wrapper .hero-heading_first small {
   font-size: 18px;
   display: block;
   font-weight: 400;
 }
-
 .headerSection .hero-wrapper .hero-heading_second {
   margin-bottom: 5px;
 }
-
 .headerSection .hero-wrapper .hero-heading_second, .headerSection .hero-wrapper .hero-heading_des {
   display: block;
   font-weight: 400;
   font-family: "Fira Code", monospace;
-  font-size: 18px;
-  line-height: 1.7;
+  font-size: 16px;
+  line-height: 2;
+  max-width: 740px;
+  text-wrap: balance;
+  margin-block: 5px;
 }
-
 @media screen and (max-width: 640px) {
   .headerSection .hero-wrapper .hero-heading_second, .headerSection .hero-wrapper .hero-heading_des {
     font-size: 15px;
   }
 }
-
 @media screen and (max-width: 480px) {
   .headerSection .hero-wrapper .hero-heading_second, .headerSection .hero-wrapper .hero-heading_des {
     font-size: 14px;
   }
 }
-
 .headerSection .hero-wrapper .hero-heading_second a, .headerSection .hero-wrapper .hero-heading_des a {
   color: #9ea93f;
   text-underline-position: under;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-
 .headerSection .hero-wrapper .hero-heading_second a:hover, .headerSection .hero-wrapper .hero-heading_des a:hover {
   color: #60712f;
 }
-
 .headerSection .hero-illustration svg {
   max-width: 100%;
 }
-
 @media screen and (max-width: 1280px) {
   .headerSection .hero-illustration {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
   }
 }
-
 @media screen and (max-width: 480px) {
   .headerSection .hero-illustration {
     margin-top: -20%;
   }
 }
-
 .headerSection .wave {
   position: absolute;
   left: 0;
@@ -366,7 +292,6 @@ nav ul li:hover ~ .cursor {
   padding: 100px 0;
   background: #121212;
 }
-
 .portfolioSection h2 {
   text-align: center;
   letter-spacing: 0.05em;
@@ -375,7 +300,6 @@ nav ul li:hover ~ .cursor {
   font-family: "Fira Code", monospace;
   word-spacing: -0.2em;
 }
-
 .portfolioSection h2::after {
   content: "";
   display: block;
@@ -385,81 +309,64 @@ nav ul li:hover ~ .cursor {
   margin: 20px auto;
   background: #9ea93f;
 }
-
 @media screen and (max-width: 1280px) {
   .portfolioSection h2 {
     font-size: 40px;
   }
 }
-
 @media screen and (max-width: 740px) {
   .portfolioSection h2 {
     font-size: 35px;
   }
 }
-
 @media screen and (max-width: 480px) {
   .portfolioSection h2 {
     font-size: 26px;
   }
 }
-
 @media screen and (max-width: 420px) {
   .portfolioSection h2 {
     font-size: 25px;
   }
 }
-
 .portfolioSection .inner-wrap {
   margin: 0 5%;
 }
 
 .projects {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: 60px -5px;
 }
-
 .projects .project {
   position: relative;
-  width: calc(100% / 4 - 10px);
+  width: calc(25% - 10px);
   margin: 0 5px 10px;
   text-align: center;
   text-decoration: none;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-
 @media screen and (max-width: 1500px) {
   .projects .project {
-    width: calc(100% / 3 - 10px);
+    width: calc(33.3333333333% - 10px);
   }
 }
-
 @media screen and (max-width: 1100px) {
   .projects .project {
-    width: calc(100% / 2 - 10px);
+    width: calc(50% - 10px);
   }
 }
-
 @media screen and (max-width: 740px) {
   .projects .project {
-    width: calc(100% / 2 - 10px);
+    width: calc(50% - 10px);
   }
 }
-
 @media screen and (max-width: 480px) {
   .projects .project {
     width: calc(100% - 10px);
   }
 }
-
 .projects .project .image-wrap {
   position: relative;
   width: 100%;
@@ -469,17 +376,14 @@ nav ul li:hover ~ .cursor {
   border-radius: 3px;
   overflow: hidden;
 }
-
 @media screen and (max-width: 640px) {
   .projects .project .image-wrap {
     max-height: auto;
   }
 }
-
 .projects .project .image-wrap.react:after {
   content: "Personal Project";
 }
-
 .projects .project .image-wrap::after {
   content: "Designed by iNET-Web";
   font-family: inherit;
@@ -497,17 +401,14 @@ nav ul li:hover ~ .cursor {
   border-top-left-radius: 3px;
   background: #9ea93f;
 }
-
 .projects .project .image-wrap img {
   display: block;
   width: 100%;
   max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-
 .projects .project span {
   display: block;
   text-align: center;
@@ -517,26 +418,21 @@ nav ul li:hover ~ .cursor {
   padding: 10px 0;
   text-overflow: ellipsis;
   overflow: hidden;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-
 @media screen and (max-width: 1500px) {
   .projects .project span {
     font-size: 15px;
   }
 }
-
 @media screen and (max-width: 1320px) {
   .projects .project span {
     font-size: 14px;
   }
 }
-
 .projects .project:hover .image-wrap img {
   opacity: 0.8;
 }
-
 .projects .project:hover span {
   color: #9ea93f;
   -webkit-text-decoration: underline #9ea93f;
@@ -548,7 +444,6 @@ nav ul li:hover ~ .cursor {
   text-align: center;
   background: #181f1c;
 }
-
 .contactSection h2 {
   text-align: center;
   letter-spacing: 0.05em;
@@ -557,7 +452,6 @@ nav ul li:hover ~ .cursor {
   font-family: "Fira Code", monospace;
   word-spacing: -0.2em;
 }
-
 .contactSection h2::after {
   content: "";
   display: block;
@@ -567,59 +461,49 @@ nav ul li:hover ~ .cursor {
   margin: 20px auto;
   background: #9ea93f;
 }
-
 @media screen and (max-width: 1280px) {
   .contactSection h2 {
     font-size: 40px;
   }
 }
-
 @media screen and (max-width: 740px) {
   .contactSection h2 {
     font-size: 35px;
   }
 }
-
 @media screen and (max-width: 480px) {
   .contactSection h2 {
     font-size: 26px;
   }
 }
-
 @media screen and (max-width: 420px) {
   .contactSection h2 {
     font-size: 25px;
   }
 }
-
 .contactSection p {
   margin-block: 1em;
   line-height: 1.7;
   font-size: 18px;
   padding-top: 10px;
 }
-
 @media screen and (max-width: 740px) {
   .contactSection p {
     font-size: 16px;
   }
 }
-
 @media screen and (max-width: 480px) {
   .contactSection p {
     font-size: 14px;
   }
 }
-
 .contactSection .mail i {
   display: inline-block;
   margin-top: 10px;
   font-size: 50px;
   color: #fff;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-
 .contactSection .mail i:hover {
   color: #9ea93f;
 }
@@ -632,12 +516,10 @@ footer {
   padding: 20px 0;
   color: #fff;
 }
-
 footer i {
   margin-right: 10px;
   color: #ff0000;
-  -webkit-animation: heartbeat 0.7s ease-in infinite;
-          animation: heartbeat 0.7s ease-in infinite;
+  animation: heartbeat 0.7s ease-in infinite;
 }
 
 .cursor {
@@ -647,55 +529,24 @@ footer i {
   pointer-events: none;
   border: 2px solid transparent;
   border-radius: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -webkit-transition: width 0.2s, height 0.2s;
+  transform: translate(-50%, -50%);
   transition: width 0.2s, height 0.2s;
-}
-
-@-webkit-keyframes heartbeat {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  25% {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-  }
-  50% {
-    -webkit-transform: scale(1.3);
-            transform: scale(1.3);
-  }
-  75% {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
 }
 
 @keyframes heartbeat {
   0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
   25% {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+    transform: scale(1.2);
   }
   50% {
-    -webkit-transform: scale(1.3);
-            transform: scale(1.3);
+    transform: scale(1.3);
   }
   75% {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+    transform: scale(1.2);
   }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
